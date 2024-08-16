@@ -23,10 +23,7 @@
 //Убедиться что сведения о первом директоре включают сведения о втором, который так же добавлен к нему.
 
 
-import com.itstep.company.Director;
-import com.itstep.company.Employee;
-import com.itstep.company.Person;
-import com.itstep.company.Worker;
+import com.itstep.company.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -46,5 +43,8 @@ public class Main {
         System.out.println(worker3);
         System.out.println(director1);
         System.out.println(director2);
+
+        String searchName = "Petr Petrov"; // Имя для поиска
+        ((Director) director1).findEmployeeByName(worker2, searchName);
     }
 }

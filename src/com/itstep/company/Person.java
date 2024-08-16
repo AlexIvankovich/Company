@@ -9,6 +9,10 @@ public class Person {
         this.surname = surname;
     }
 
+    public String getFullName() {
+        return name + " " + surname;
+    }
+
     public void personInfo() {
         System.out.println(name + " " + surname);
     }

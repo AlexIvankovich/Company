@@ -2,7 +2,7 @@ package com.itstep.company;
 
 import java.util.Arrays;
 
-public class Director extends Employee {
+public class Director extends Employee implements EmployeeSearch {
 
     private Employee[] employees;
 
@@ -45,4 +45,15 @@ public class Director extends Employee {
                 "; Employees=" + Arrays.toString(employees) +
                 '}';
     }
+
+    @Override
+    public void findEmployeeByName(Employee employee, String name) {
+        if (employee.getFullName().equals(name)) {
+            System.out.println("Работник найден: " + employee.getFullName() + " под управлением " + getFullName());
+            return;
+        }
+         else {
+            System.out.println("Работник не найден в подчинении " + getFullName());
+        }
+     }
 }
